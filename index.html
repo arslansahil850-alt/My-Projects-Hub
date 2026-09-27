@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Developing with Arslan — Explore HTML, CSS, JavaScript and web development projects.">
+
+    <title>Developing with Arslan</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                <span class="logo-mark">&lt;/&gt;</span>
+                <span class="logo-text">Developing with Arslan<span>.</span></span>
+            </a>
+
+            <nav class="nav-links" id="navLinks"></nav>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" type="button">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="hero-small-title">
+                    Welcome to my web development space
+                </p>
+
+                <h1>
+                    Developing with Arslan
+                </h1>
+
+                <p class="hero-description">
+                    A collection of my web development projects, experiments,
+                    and digital work built with modern web technologies.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="primary-btn">
+                        Explore My Projects
+                    </a>
+
+                    <a href="https://github.com/arslansahil850-alt/" target="_blank" rel="noopener noreferrer"
+                        class="secondary-btn">
+                        Visit My GitHub
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="about-section">
+
+            <div class="section-container">
+
+                <p class="section-label">
+                    ABOUT MY WORK
+                </p>
+
+                <h2>
+                    Building Ideas Into Web Experiences
+                </h2>
+
+                <p class="about-text">
+                    I build responsive and interactive websites while continuously
+                    improving my skills in frontend and backend development.
+                    This page brings my projects together in one place.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="projects-section" id="projects">
+
+            <div class="section-container">
+
+                <p class="section-label">
+                    MY WORK
+                </p>
+
+                <h2>
+                    Explore My Projects
+                </h2>
+
+                <p class="section-description">
+                    Search, filter and explore my web development projects.
+                </p>
+
+
+                <div class="project-controls">
+
+                    <div class="search-box">
+
+                        <input type="search" id="projectSearch" placeholder="Search projects..." autocomplete="off">
+
+                    </div>
+
+
+                    <div class="filter-buttons" id="filterButtons"></div>
+
+                </div>
+
+
+                <div class="projects-results">
+
+                    <p class="results-count" id="resultsCount"></p>
+
+                    <p class="no-results" id="noResults">
+                        No projects found.
+                    </p>
+
+                </div>
+
+
+                <div class="project-category" id="htmlCssCategory">
+
+                    <div class="category-heading">
+
+                        <span class="category-number">
+                            01
+                        </span>
+
+                        <div>
+                            <h3>
+                                HTML &amp; CSS
+                            </h3>
+
+                            <p>
+                                Responsive layouts, landing pages and modern
+                                interface designs.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="project-grid" id="htmlCssProjects"></div>
+
+                </div>
+
+
+                <div class="project-category" id="javascriptCategory">
+
+                    <div class="category-heading">
+
+                        <span class="category-number">
+                            02
+                        </span>
+
+                        <div>
+                            <h3>
+                                JavaScript
+                            </h3>
+
+                            <p>
+                                Interactive applications and projects powered
+                                by JavaScript.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="project-grid" id="javascriptProjects"></div>
+
+                </div>
+
+
+                <div class="project-category" id="webProjectsCategory">
+
+                    <div class="category-heading">
+
+                        <span class="category-number">
+                            03
+                        </span>
+
+                        <div>
+                            <h3>
+                                Web Projects
+                            </h3>
+
+                            <p>
+                                Complete web projects combining different
+                                technologies and ideas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-grid" id="webProjects"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="services-section">
+
+            <div class="section-container">
+
+                <p class="section-label">
+                    WHAT I CAN BUILD
+                </p>
+
+                <h2>
+                    Need a Website for Your Idea?
+                </h2>
+
+                <p class="section-description">
+                    From responsive landing pages to interactive web applications,
+                    I can turn ideas into functional web experiences.
+                </p>
+
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+
+                        <span class="service-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Responsive Websites
+                        </h3>
+
+                        <p>
+                            Websites designed to work smoothly across mobile,
+                            tablet and desktop screens.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <span class="service-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Interactive Web Apps
+                        </h3>
+
+                        <p>
+                            Interactive experiences using JavaScript and modern
+                            web development techniques.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <span class="service-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Custom Web Solutions
+                        </h3>
+
+                        <p>
+                            Custom interfaces and web solutions built around
+                            specific project requirements.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="cta-section">
+
+            <div class="section-container">
+
+                <div class="cta-content">
+
+                    <p class="section-label">
+                        LET'S BUILD SOMETHING
+                    </p>
+
+                    <h2>
+                        Have an Idea for a Website?
+                    </h2>
+
+                    <p>
+                        Explore my projects, check my GitHub, and get in touch
+                        if you have a web project you would like to bring to life.
+                    </p>
+
+                    <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer" class="primary-btn">
+                        View My GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+
+                    <span class="logo-mark">
+                        &lt;/&gt;
+                    </span>
+
+                    <span class="logo-text">
+
+                        Developing with Arslan.
+                    </span>
+
+                </a>
+
+                <p>
+                    Developing with Arslan — building and learning through
+                    web development projects.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <div id="footerLinksContainer"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy;
+                <span id="currentYear"></span>
+                Developing with Arslan. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
