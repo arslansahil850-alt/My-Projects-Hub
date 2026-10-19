@@ -1,8 +1,13 @@
+const portfolioUrl = "https://example.com";
 
 const navLinks = [
     {
         name: "Home",
         url: "#home"
+    },
+    {
+        name: "Portfolio",
+        url: portfolioUrl
     },
     {
         name: "GitHub",
@@ -16,8 +21,12 @@ const footerLinks = [
         url: "#home"
     },
     {
+        name: "Portfolio",
+        url: portfolioUrl
+    },
+    {
         name: "GitHub",
-        url: "https://github.com/"
+        url: "https://github.com/arslansahil850-alt/"
     }
 ];
 
@@ -70,7 +79,14 @@ const projects = [
         live: "https://shopora-static-page.netlify.app/",
         github: "https://github.com/arslansahil850-alt/Shopora-Static-Page/"
     },
-
+    {
+        name: "Modern ToDo",
+        description: "A multi-function task management application.",
+        technologies: "HTML • CSS • JavaScript",
+        category: "JavaScript",
+        live: "https://realistic-todo-app.netlify.app/",
+        github: "https://github.com/arslansahil850-alt/Modern-ToDo-App/"
+    },
     {
         name: "Calculator App",
         description: "A functional calculator built with JavaScript.",
@@ -79,7 +95,6 @@ const projects = [
         live: "https://calculator-app-by-arslan.netlify.app/",
         github: "https://github.com/arslansahil850-alt/Calculator-App/"
     },
-
     {
         name: "To-Do App",
         description: "A simple task management application.",
@@ -88,7 +103,6 @@ const projects = [
         live: "https://todo-app-by-arslan.netlify.app/",
         github: "https://github.com/arslansahil850-alt/To-Do-App/"
     },
-
     {
         name: "Quiz App",
         description: "An interactive quiz application with scoring.",
@@ -97,7 +111,6 @@ const projects = [
         live: "https://quiz-app-by-arslan.netlify.app/",
         github: "https://github.com/arslansahil850-alt/Quiz-App/"
     },
-
     {
         name: "Stopwatch App",
         description: "A responsive stopwatch with start, stop and reset controls.",
@@ -106,7 +119,6 @@ const projects = [
         live: "https://stopwatch-app-by-arslan.netlify.app/",
         github: "https://github.com/arslansahil850-alt/Stop-Watch/"
     },
-
     {
         name: "Weather App",
         description: "A weather application using an external API.",
@@ -115,7 +127,6 @@ const projects = [
         live: "https://weather-app-by-arslan.netlify.app/",
         github: "https://github.com/arslansahil850-alt/Weather-App/"
     },
-
     {
         name: "FOODIE.com",
         description: "A complete web project combining multiple technologies.",
@@ -125,8 +136,16 @@ const projects = [
         github: "https://github.com/arslansahil850-alt/FOODIE/"
     },
     {
+        name: "Web Loaders",
+        description: "A complete web project about CSS loaders combining multiple technologies.",
+        technologies: "HTML • CSS • JavaScript",
+        category: "Web Projects",
+        live: "https://webloaders.netlify.app/",
+        github: "https://github.com/arslansahil850-alt/Web-Loaders/"
+    },
+    {
         name: "Navbar Collections",
-        description: "10 Modern Navbar Designs — a collection of responsive, creative, and modern navigation bar concepts built with HTML, CSS, and JavaScript.",
+        description: "10 modern navbar designs — a collection of responsive, creative, and modern navigation bar concepts built with HTML, CSS, and JavaScript.",
         technologies: "HTML • CSS • JavaScript",
         category: "Web Projects",
         live: "https://navbar-collections.netlify.app/",
@@ -140,18 +159,17 @@ const projectSearch = document.getElementById("projectSearch");
 const filterButtons = document.getElementById("filterButtons");
 const resultsCount = document.getElementById("resultsCount");
 const noResults = document.getElementById("noResults");
+const menuBtn = document.getElementById("menuBtn");
 
 const categoryContainers = {
     "HTML & CSS": {
         section: document.getElementById("htmlCssCategory"),
         container: document.getElementById("htmlCssProjects")
     },
-
     "JavaScript": {
         section: document.getElementById("javascriptCategory"),
         container: document.getElementById("javascriptProjects")
     },
-
     "Web Projects": {
         section: document.getElementById("webProjectsCategory"),
         container: document.getElementById("webProjects")
@@ -172,15 +190,11 @@ function createLink(link) {
 }
 
 function displayNavLinks() {
-    navContainer.innerHTML = navLinks
-        .map(createLink)
-        .join("");
+    navContainer.innerHTML = navLinks.map(createLink).join("");
 }
 
 function displayFooterLinks() {
-    footerContainer.innerHTML = footerLinks
-        .map(createLink)
-        .join("");
+    footerContainer.innerHTML = footerLinks.map(createLink).join("");
 }
 
 function createProjectCard(project) {
@@ -188,30 +202,14 @@ function createProjectCard(project) {
         <article class="project-card">
             <div>
                 <h4>${project.name}</h4>
-
-                <p>
-                    ${project.description}
-                </p>
-
-                <div class="project-tech">
-                    ${project.technologies}
-                </div>
+                <p>${project.description}</p>
+                <div class="project-tech">${project.technologies}</div>
             </div>
-
             <div class="project-links">
-                <a
-                    href="${project.live}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href="${project.live}" target="_blank" rel="noopener noreferrer">
                     Live Demo
                 </a>
-
-                <a
-                    href="${project.github}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href="${project.github}" target="_blank" rel="noopener noreferrer">
                     GitHub
                 </a>
             </div>
@@ -243,8 +241,7 @@ function displayProjects(projectList) {
     resultsCount.textContent =
         `${projectList.length} ${projectList.length === 1 ? "project" : "projects"} found`;
 
-    noResults.style.display =
-        projectList.length === 0 ? "block" : "none";
+    noResults.style.display = projectList.length === 0 ? "block" : "none";
 }
 
 const categories = [
@@ -271,14 +268,11 @@ function createFilterButtons() {
 let currentFilter = "All";
 
 function filterProjects() {
-    const searchValue = projectSearch.value
-        .toLowerCase()
-        .trim();
+    const searchValue = projectSearch.value.toLowerCase().trim();
 
     const filteredProjects = projects.filter(project => {
         const matchesCategory =
-            currentFilter === "All" ||
-            project.category === currentFilter;
+            currentFilter === "All" || project.category === currentFilter;
 
         const searchableText = `
             ${project.name}
@@ -287,10 +281,7 @@ function filterProjects() {
             ${project.category}
         `.toLowerCase();
 
-        const matchesSearch =
-            searchableText.includes(searchValue);
-
-        return matchesCategory && matchesSearch;
+        return matchesCategory && searchableText.includes(searchValue);
     });
 
     displayProjects(filteredProjects);
@@ -308,31 +299,32 @@ filterButtons.addEventListener("click", event => {
     });
 
     button.classList.add("active");
-
     currentFilter = button.dataset.filter;
-
     filterProjects();
 });
 
 projectSearch.addEventListener("input", filterProjects);
 
-const menuBtn = document.getElementById("menuBtn");
-
 menuBtn.addEventListener("click", () => {
-    navContainer.classList.toggle("active");
+    const isOpen = navContainer.classList.toggle("active");
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+    menuBtn.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
 });
 
 navContainer.addEventListener("click", event => {
-    if (event.target.tagName === "A") {
+    if (event.target.closest("a")) {
         navContainer.classList.remove("active");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("aria-label", "Open navigation menu");
     }
 });
 
-document.getElementById("currentYear").textContent =
-    new Date().getFullYear();
+document.getElementById("currentYear").textContent = new Date().getFullYear();
 
 displayNavLinks();
 displayFooterLinks();
 createFilterButtons();
 displayProjects(projects);
-
