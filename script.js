@@ -104,6 +104,14 @@ const projects = [
         github: "https://github.com/arslansahil850-alt/To-Do-App/"
     },
     {
+        name: "Password Generator",
+        description: "An interactive password generator application with design.",
+        technologies: "HTML • CSS • JavaScript",
+        category: "JavaScript",
+        live: "https://password-generator-pages.netlify.app/",
+        github: "https://github.com/arslansahil850-alt/Password-Generator/"
+    },
+    {
         name: "Quiz App",
         description: "An interactive quiz application with scoring.",
         technologies: "HTML • CSS • JavaScript",
@@ -126,6 +134,94 @@ const projects = [
         category: "JavaScript",
         live: "https://weather-app-by-arslan.netlify.app/",
         github: "https://github.com/arslansahil850-alt/Weather-App/"
+    },
+    {
+        name: "My Portfolio",
+        description: " My complete personal portfolio website combining multiple technologies.",
+        technologies: "HTML • CSS • JavaScript",
+        category: "Web Projects",
+        live: "https://arslan-weblab.netlify.app/",
+        github: "https://github.com/arslansahil850-alt/Arslan-Weblab/"
+    },
+    {
+        name: "Real Estate Website",
+        description: "A complete web project combining multiple technologies.",
+        technologies: "HTML • CSS • JavaScript",
+        category: "Web Projects",
+        live: "https://real-estate-wbproject.netlify.app/",
+        github: "https://github.com/arslansahil850-alt/Real-Estate-Website/"
+    },
+    {
+        name: "Learn.com",
+        description: "A complete learning demo web project combining multiple technologies.",
+        technologies: "HTML • CSS • JavaScript",
+        category: "Web Projects",
+        live: "https://learning-demo-website.netlify.app/",
+        github: "https://github.com/arslansahil850-alt/Learning-Website/"
+    },
+    {
+        name: "Nexora",
+        description: "A complete business growing demo web project combining multiple technologies.",
+        technologies: "HTML • CSS • JavaScript",
+        category: "Web Projects",
+        live: "https://nexora-webproject.netlify.app/",
+        github: "https://github.com/arslansahil850-alt/Business-Service-Web/"
+    },
+    {
+        name: "Business Service Website",
+        description: "A complete business service demo web project combining multiple technologies.",
+        technologies: "HTML • CSS • JavaScript",
+        category: "Web Projects",
+        live: "https://business-service-web.vercel.app/",
+        github: "https://github.com/arslansahil850-alt/Business-Service-Web"
+    },
+    {
+        name: "Gym Fitness Website",
+        description: "A complete gym fitness demo web project combining multiple technologies.",
+        technologies: "HTML • CSS • JavaScript",
+        category: "Web Projects",
+        live: "https://gym-fitness-website-cyan.vercel.app/",
+        github: "https://github.com/arslansahil850-alt/Gym-Website"
+    },
+    {
+        name: "Classis Food Web",
+        description: "A enhanced restaurant demo web project combining multiple technologies.",
+        technologies: "HTML • CSS • JavaScript",
+        category: "Web Projects",
+        live: "https://classic-foodie-web.vercel.app/",
+        github: "https://github.com/arslansahil850-alt/FOODIE"
+    },
+    {
+        name: "Stayora",
+        description: "A complete hotel booking demo web project combining multiple technologies.",
+        technologies: "HTML • CSS • JavaScript",
+        category: "Web Projects",
+        live: "https://hotel-booking-website-alpha-gray.vercel.app/",
+        github: "https://github.com/arslansahil850-alt/Stayora-Website"
+    },
+    {
+        name: "Digital Agency",
+        description: "A complete  digital agency demo web project combining multiple technologies.",
+        technologies: "HTML • CSS • JavaScript",
+        category: "Web Projects",
+        live: "https://digital-agency-web-green.vercel.app/",
+        github: "https://github.com/arslansahil850-alt/Digital-Agency/"
+    },
+    {
+        name: "Dental Website",
+        description: "A complete  dental demo web project combining multiple technologies.",
+        technologies: "HTML • CSS • JavaScript",
+        category: "Web Projects",
+        live: "https://dental-web-fawn.vercel.app/",
+        github: "https://github.com/arslansahil850-alt/Dental-Web/"
+    },
+    {
+        name: "SAAS Project",
+        description: "A complete SAAS project combining multiple technologies.",
+        technologies: "HTML • CSS • JavaScript",
+        category: "Web Projects",
+        live: "https://saas-demo-webproject.netlify.app/",
+        github: "https://github.com/arslansahil850-alt/SAAS-web-Project/"
     },
     {
         name: "FOODIE.com",
