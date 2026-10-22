@@ -7,7 +7,7 @@ const navLinks = [
     },
     {
         name: "Portfolio",
-        url: portfolioUrl
+        url: "https://arslan-weblab.netlify.app/"
     },
     {
         name: "GitHub",
@@ -22,7 +22,7 @@ const footerLinks = [
     },
     {
         name: "Portfolio",
-        url: portfolioUrl
+        url: "https://arslan-weblab.netlify.app/"
     },
     {
         name: "GitHub",
@@ -142,6 +142,14 @@ const projects = [
         category: "Web Projects",
         live: "https://arslan-weblab.netlify.app/",
         github: "https://github.com/arslansahil850-alt/Arslan-Weblab/"
+    },
+    {
+        name: "Shooping Website",
+        description: "A complete shopping web project combining multiple technologies.",
+        technologies: "HTML • CSS • JavaScript",
+        category: "Web Projects",
+        live: "https://shopping-demo-website.netlify.app/",
+        github: "https://github.com/arslansahil850-alt/Shopping-Website/"
     },
     {
         name: "Real Estate Website",
