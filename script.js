@@ -1,4 +1,4 @@
-const portfolioUrl = "https://example.com";
+const portfolioUrl = "https://arslan-weblab.netlify.app/";
 
 const navLinks = [
     {
@@ -7,7 +7,7 @@ const navLinks = [
     },
     {
         name: "Portfolio",
-        url: "https://arslan-weblab.netlify.app/"
+        url: portfolioUrl
     },
     {
         name: "GitHub",
@@ -432,3 +432,29 @@ displayNavLinks();
 displayFooterLinks();
 createFilterButtons();
 displayProjects(projects);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('backToTop');
+
+  if (!backToTopBtn) return;
+
+  const toggleBackToTop = () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  
+  window.addEventListener('scroll', toggleBackToTop, { passive: true });
+  backToTopBtn.addEventListener('click', scrollToTop);
+});

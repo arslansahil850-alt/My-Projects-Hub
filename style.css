@@ -568,7 +568,63 @@ button {
     font-size: 12px;
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md, 12px);
+
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px var(--shadow);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(16px) scale(0.9);
+    transition:
+        opacity var(--transition, 0.3s ease),
+        visibility var(--transition, 0.3s ease),
+        transform var(--transition, 0.3s ease),
+        background-color var(--transition, 0.3s ease),
+        border-color var(--transition, 0.3s ease),
+        color var(--transition, 0.3s ease);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent-hover);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px var(--shadow), 0 0 12px var(--accent-soft);
+    outline: none;
+}
+
+.back-to-top:active {
+    transform: translateY(0) scale(0.98);
+}
+
 @media (max-width: 1000px) {
+
     .project-grid,
     .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -670,6 +726,13 @@ button {
     .footer-container {
         flex-direction: column;
         gap: 40px;
+    }
+
+    .back-to-top {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
     }
 }
 
